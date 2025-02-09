@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    INDEX
+{% endblock %}
+
+{% block main %}
+    {% for i in range(stocksymbol|length) %}
+        <p>{{ stocksymbol[i]["stocksymbol"] }} Amount: {{ amount[i]["amount"] }} Value: {{ stockvalue[i]["price"] }} Total Value: {{ stockvalue[i]["price"] * amount[i]["amount"] }}</p>
+    {% endfor %}
+        <p>Cash: {{ cash }}</p>
+        <p>Total Value: {{ cash_stock_value_total }}</p>
+{% endblock %}
