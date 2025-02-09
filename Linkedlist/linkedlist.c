@@ -11,10 +11,7 @@ node;
 
 int main(void)
 {
-    // iniatalize variable named list which is of structure node (defined above) which is empty to start off NULL
     node *list = NULL;
- 
-    //add a number to list
     node *n = malloc(sizeof(node));
 
     //safty step if f.e computer out of memory stop here
@@ -43,10 +40,8 @@ int main(void)
     list->next->next = n;
 
     //print numbers
-    //node (type def above) *tmp (temporary pointer) = list (same as i = 0); the temporary node isnt NULL, go on and set the temporaray node as the next one in my list with a pointer
     for(node *tmp = list; tmp != NULL; tmp = tmp->next)
     {
-        //print whatever in my tmp node is as number (def above)
         printf("%i\n", tmp->number);
     }
     //free linked list
