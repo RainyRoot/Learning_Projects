@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+
+            document.querySelector('#bt1'));
+            document.querySelector('#bt1').addEventListener('click', function(){
+                this.style.backgroundColor = 'red';
+                checkAnswer('Dark Souls');
+            });
+            document.querySelector('#bt2').addEventListener('click', function(){
+                this.style.backgroundColor = 'green';
+                checkAnswer('Dungeon Keeper 2');
+                    });
+            document.querySelector('#bt3').addEventListener('click', function(){
+                this.style.backgroundColor = 'red'
+                checkAnswer('Minecraft');
+            });
+
+            document.querySelector('#check').addEventListener('click', function(){
+            let input = document.querySelector('input');
+            if (input.value === 'CS50'){
+                input.style.backgroundColor = 'green';
+                document.querySelector('#freeresponse').innerHTML = 'Correct!';
+            } else {
+                input.style.backgroundColor = 'red';
+                document.querySelector('#freeresponse').innerHTML = 'Incorrect!';
+            }
+            });
+            function checkAnswer(selectedAnswer){
+                if (selectedAnswer == 'Dungeon Keeper 2'){
+                    document.getElementById('multiplechoice').textContent = 'Correct!';
+                } else {
+                    document.getElementById('multiplechoice').textContent = 'Incorrect!';
+                }
+        }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                    <h3>What is the best game?</h3>
+                        <button id="bt1" class="btn btn-light">Dark Souls</button>
+                        <button id="bt2" class="btn btn-light">Dungeon Keeper 2</button>
+                        <button id="bt3" class="btn btn-light">Minecraft</button>
+                        <p id="multiplechoice"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                    <h3>What is the name of this course?</h3>
+                    <input type="text"></input>
+                    <button id="check">Check Answer</button>
+                    <p id="freeresponse"></p>
+            </div>
+        </div>
+
+    </body>
+</html>
