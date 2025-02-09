@@ -1,0 +1,41 @@
+/* Resetting default browser styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling links */
+a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 10px; /* Spacing between links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling table */
+table {
+    width: 100%; /* Make table full width */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 20px; /* Spacing above table */
+}
+
+table td {
+    padding: 10px; /* Padding inside table cells */
+    border: 1px solid #ccc; /* Gray border */
+}
+
+table td:first-child {
+    font-weight: bold; /* Bold font for first column */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 20px auto; /* Center table */
+    }
+}
