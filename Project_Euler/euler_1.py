@@ -1,3 +1,5 @@
+# Problem 1 Sum of Multiples of 3 or 5
+
 def sum_of_multiples(limit, multiples):
     return sum(
         number for number in range(limit)
